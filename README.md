@@ -50,8 +50,8 @@ mandel.plot()
 ```
 This will create a matplotlib figure like this:  
 
-![image1](images/image1.png)  
+![image1](image1.png)  
 
 Clicking on the small build on the top gives you this:  
 
-![image2](images/image2.png)  
+![image2](image2.png)  
