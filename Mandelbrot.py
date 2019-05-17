@@ -23,6 +23,7 @@ class Mandelbrot:
 	"""A class representing an object used for customizing and plotting a mandelbrot set"""
 
 	def __init__(self, width=9, height=6, dpi=72, extent=[-2,1,-1,1], maxIter=128, cmap="cubehelix", zoom=2):
+
 		self.width = width
 		self.height = height
 		self.dpi = dpi
@@ -55,7 +56,6 @@ class Mandelbrot:
 	def _handleClick(self, event):
 		""""zoom in and update image when clicking on figure"""
 
-
 		(x_min, x_max, y_min, y_max) = [i for i in self.extent]
 		if event.xdata != None and event.ydata != None:
 			(click_x, click_y) = (event.xdata, event.ydata)
@@ -73,21 +73,14 @@ class Mandelbrot:
 
 		if self._start: # the first time this function is called, setup the figure
 			self._start = False
-			# width = 10
-			# height = width*self.rows/self.columns
-
-			# # fig = plt.figure(figsize=(self.width, self.height), dpi=self.dpi)
-			# fig = plt.figure(dpi=self.dpi)
-			# # fig.set_size_inches(self.width, self.height)
 
 			fig, ax = plt.subplots(figsize=(self.width, self.height))
-
 			fig.canvas.mpl_connect('button_press_event', self._handleClick) # connect zoom interaction
 
 			norm = colors.PowerNorm(0.3)
 			plt.imshow(mandelbrotSet, extent=self.extent, interpolation="nearest", cmap=self.cmap, norm=norm)
 			plt.title("Click where you want to zoom in")
-			plt.show()
+			return plt.show()
 
 		else: # just redraw the image
 			norm = colors.PowerNorm(0.3)
@@ -95,9 +88,9 @@ class Mandelbrot:
 			plt.draw()
 
 if __name__ == "__main__":
-
+	# example usage
 	extent = [-2,1,-1,1] # full size
-	# extent = [-0.35,0.08,0.63,1] # top hyperbolic
+	# extent = [-0.35,0.08,0.63,1]
 	# extent = [-0.1443,-0.1432,-0.8389,-0.8379]
 
 	mandel = Mandelbrot(extent=extent, dpi=128, maxIter=400, cmap="gnuplot2", zoom=5)

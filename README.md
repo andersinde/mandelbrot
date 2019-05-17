@@ -1,8 +1,6 @@
-### ovn7
+## mandelbrot
 
-## A customizable Mandelbrot image generator in python
-
-Use this library to create a Mandelbrot set.
+Use this code to create an interactive Mandelbrot set figure
 
 ### Installation
 
@@ -11,10 +9,9 @@ import Mandelbrot
 ```
 
 ### Dependencies
-- python 3.7
-- numpy 1.16.2
-- matplotlib 3.0.3
-- numba 0.43.1
+- numpy
+- matplotlib
+- numba
 
 NOTE: This project has only been tested using: python 3.7, numpy 1.16.2, matplotlib 3.0.3 and numba 0.43.1
 
@@ -32,12 +29,7 @@ Parameters:
  - **extent** - an array of the boundary coordinates: [real_min, real_max, imaginary_min, imaginary_max]
  - **maxIter** - maximum iteration used in calculation, a larger value will render more detail
  - **cmap** - the colormap, used for customizing the color of the image, see [matplotlib.org/users/colormaps](https://matplotlib.org/users/colormaps.html) to find one that you prefer
-
-#### Plot the image
-Opens an interactive figure where you can zoom in
-```python
-def plot()
-```
+- **zoom** - zoom parameter
 
 #### Basic example
 
@@ -52,6 +44,6 @@ This will create a matplotlib figure like this:
 
 ![image1](image1.png)  
 
-Clicking on the small build on the top gives you this:  
+Clicking on the small bulb on the top gives you this:  
 
 ![image2](image2.png)  
