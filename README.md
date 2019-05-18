@@ -28,10 +28,10 @@ Parameters:
 #### Basic example
 
 ```python
-import Mandelbrot as mb # import module
+import Mandelbrot as mb
 
 extent = [-0.40, 0.15, 0.63, 1]
-mandel = mb.Mandelbrot(extent=extent, cmap="magma") # create instance
+mandel = mb.Mandelbrot(extent=extent, cmap="magma")
 mandel.plot()
 ```
 This will create a matplotlib figure like this:  
