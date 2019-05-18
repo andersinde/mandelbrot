@@ -1,14 +1,9 @@
 ## mandelbrot
 
-Use this code to create an interactive Mandelbrot set figure
-
-### Installation
-
-```python
-import Mandelbrot
-```
+Create an interactive Mandelbrot set figure
 
 ### Dependencies
+- python 3
 - numpy
 - matplotlib
 - numba
@@ -18,9 +13,8 @@ NOTE: This project has only been tested using: python 3.7, numpy 1.16.2, matplot
 ### Documentation
 
 #### Class constructor
-Create new instance of the Mandelbrot class
 ```python
-def __init__(width=9, height=6, dpi=72, extent=[-2,1,-1,1], maxIter=128, cmap="cubehelix", zoom=2):
+Mandelbrot.__init__(width=9, height=6, dpi=72, extent=[-2,1,-1,1], maxIter=128, cmap="cubehelix", zoom=2):
 ```
 Parameters:
  - **width** - width of figure in inches
