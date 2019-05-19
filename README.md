@@ -8,7 +8,7 @@ Create an interactive Mandelbrot set figure
 - matplotlib
 - numba
 
-NOTE: This project has only been tested using: python 3.7, numpy 1.16.2, matplotlib 3.0.3 and numba 0.43.1
+NOTE: I have only used this with python 3.7, numpy 1.16.2, matplotlib 3.0.3 and numba 0.43.1.
 
 ### Documentation
 
