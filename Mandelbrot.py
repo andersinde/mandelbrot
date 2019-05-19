@@ -6,8 +6,6 @@ from numba import jit
 # this function is outside of the class so that we can use jit
 @jit
 def _determineDivergence(cr, ci, maxIter, horizon2, log_horizon):
-	"""returns number of iterations until loop break for a given
-	 complex number c = cr + i*ci"""
 
 	(zr, zi) = (cr, ci) # z after first iteration
 	for n in range(maxIter):
