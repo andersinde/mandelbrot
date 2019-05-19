@@ -20,7 +20,7 @@ def _determineDivergence(cr, ci, maxIter, horizon2, log_horizon):
 	return 0
 
 class Mandelbrot:
-	"""A class representing an object used for customizing and plotting a mandelbrot set"""
+	"""A class representing an object used for customizing and plotting the mandelbrot set"""
 
 	def __init__(self, width=9, height=6, dpi=72, extent=[-2,1,-1,1], maxIter=128, cmap="cubehelix", zoom=2):
 
@@ -36,11 +36,11 @@ class Mandelbrot:
 
 	def getMandelbrotSet(self):
 		"""Performs _isInMandelbrotSet on every pixel and returns the result in an array"""
+		
 		(x_min, x_max, y_min, y_max) = [i for i in self.extent]
 		(rows, columns) = (self.width*self.dpi, self.width*self.dpi)
 		r_real = np.linspace(x_min, x_max, columns)
 		r_imag = np.linspace(y_max, y_min, rows)
-
 		result = np.empty((rows, columns))
 
 		# used for smoother colors
@@ -71,7 +71,7 @@ class Mandelbrot:
 
 		mandelbrotSet = self.getMandelbrotSet()
 
-		if self._start: # the first time this function is called, setup the figure
+		if self._start: # the first time this method is called, setup the figure
 			self._start = False
 
 			fig, ax = plt.subplots(figsize=(self.width, self.height))
@@ -89,6 +89,7 @@ class Mandelbrot:
 
 if __name__ == "__main__":
 	# example usage
+	
 	extent = [-2,1,-1,1] # full size
 	# extent = [-0.35,0.08,0.63,1]
 	# extent = [-0.1443,-0.1432,-0.8389,-0.8379]
