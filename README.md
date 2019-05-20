@@ -1,6 +1,6 @@
 ## mandelbrot
 
-Create an interactive Mandelbrot set figure
+A simple Mandelbrot set visualization with matplotlib
 
 ### Dependencies
 - python 3
@@ -38,6 +38,6 @@ This will create a matplotlib figure like this:
 
 ![image1](images/image1.png)  
 
-Clicking on the small bulb on the top gives you this:  
+Clicking on the  hyperbolic component in the middle updates the figure:
 
 ![image2](images/image2.png)  
